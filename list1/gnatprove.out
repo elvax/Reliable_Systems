@@ -1,0 +1,30 @@
+Summary of SPARK analysis
+=========================
+
+-------------------------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow   Interval   CodePeer                      Provers   Justified   Unproved
+-------------------------------------------------------------------------------------------------------------------------
+Data Dependencies                 .           .          .          .                            .           .          .
+Flow Dependencies                 .           .          .          .                            .           .          .
+Initialization                   20          20          .          .                            .           .          .
+Non-Aliasing                      .           .          .          .                            .           .          .
+Run-time Checks                  36           .          .          .                    30 (CVC4)           .          6
+Assertions                       14           .          .          .    14 (CVC4 91%, altergo 9%)           .          .
+Functional Contracts              5           .          .          .                     5 (CVC4)           .          .
+LSP Verification                  .           .          .          .                            .           .          .
+-------------------------------------------------------------------------------------------------------------------------
+Total                            75    20 (27%)          .          .                     49 (65%)           .     6 (8%)
+
+
+Analyzed 4 units
+in unit main, 0 subprograms and packages out of 1 analyzed
+  Main at main.adb:6 skipped
+in unit poly, 2 subprograms and packages out of 2 analyzed
+  Poly at poly.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Poly.Horner at poly.ads:10 flow analyzed (0 errors, 0 checks and 0 warnings) and not proved, 8 checks out of 14 proved
+in unit selection, 3 subprograms and packages out of 3 analyzed
+  Selection at selection.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Selection.Sort at selection.ads:11 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (26 checks)
+  Selection.Sorted at selection.ads:5 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (4 checks)
+in unit smallest_factor, 1 subprograms and packages out of 1 analyzed
+  Smallest_Factor at smallest_factor.adb:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (11 checks)
